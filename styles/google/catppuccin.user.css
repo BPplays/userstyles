@@ -80,6 +80,35 @@
     --uv-styles-color-text-default: @subtext0 !important;
     --uv-styles-color-review-stars: @yellow !important;
 
+    /*   convertion   */
+    .rYVYn {
+      color: @text !important;
+      background-color: @base !important;
+    }
+    .LNn04b {
+      color: @text !important;
+      background-color: @base !important;
+      border: 1px solid  @surface0 !important;
+    }
+
+    .vXQmIe {
+      color: @text !important;
+      border: 1px solid  @surface0 !important;
+    }
+    .jCkZnd {
+      color: @text !important;
+    }
+      /*   Formula   */
+    .NIzGle {
+      color: @base !important;
+      background-color: @accent-color !important;
+    }
+
+    .vk_c {
+      border: 1px solid  @surface0 !important;
+    }
+
+
     /* safe search toggle dropdown */
     .z4R3Z.yb2zA {
       color: @blue !important;
