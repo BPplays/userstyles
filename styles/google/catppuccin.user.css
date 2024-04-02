@@ -135,6 +135,22 @@
     }
 
 
+    /*  more button  */
+    .Lu57id {
+      color: @base !important;
+      background-color: @accent-color !important;
+      fill: @base !important;
+    }
+
+
+
+    /*  About this result menu  */
+    .xTFaxe {
+      color: @text !important;
+    }
+
+
+
 
 
     /* safe search toggle dropdown */
@@ -633,10 +649,6 @@
     }
     .wwUB2c {
       color: @subtext0;
-    }
-    .z1asCe {
-      color: @text !important;
-      fill: @text !important;
     }
     .rsGxI.Ww4FFb,
     .Ww4FFb {
