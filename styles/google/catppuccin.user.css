@@ -950,7 +950,7 @@
     }
     .fm06If .ILfuVd b,
     .c2xzTb .ILfuVd b {
-      background-color: fade(@blue, 25%);
+      background-color: fade(@accent-color, 25%);
       color: @text;
     }
     .GKS7s {
