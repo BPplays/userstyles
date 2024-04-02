@@ -155,6 +155,12 @@
     /*   AI overview text highligh  */
     .sxWgqf {
       --m3c7: @accent-color !important;
+
+
+      /*   ask a follow up color  */
+      --m3c10: @text !important;
+      --mc29: @surface0 !important;
+      --m3c15: @text !important;
     }
 
 
@@ -206,12 +212,13 @@
 
     /*   ask a follow up color  */
     .YzCcne {
+      --m3c10: @text !important;
       --mc2t: @surface0 !important;
 
       --mc29: @surface0 !important;
 
-      --m3c15: @accent-color !important;
-      --m3c9: @accent-color !important;
+      --m3c15: @text !important;
+      --m3c9: @text !important;
     }
 
     .bDo4af {
