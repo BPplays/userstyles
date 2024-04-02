@@ -107,14 +107,35 @@
     .vk_c {
       border: 1px solid  @surface0 !important;
     }
-
+    /*   infobox separator   */
     .HsZQAe {
       border-bottom: 1px solid  @surface0 !important;
     }
-
+    /*   top separator   */
     .KLEmSd {
       border-bottom: 1px solid  @surface0 !important;
     }
+
+    /*   AI overview separator  */
+    .RnklC {
+      --m3c17: @surface0 !important;
+
+      /* AI overview circle around generate button colors */
+      --m3c6: @base !important;
+      --m3c18: @base !important;
+      --m3c19: @base !important;
+      --m3c20: @base !important;
+      // --m3c19: @surface0 !important;
+      // --m3c20: @accent-color !important;
+    }
+
+    /*  AI overview background  */
+    .X6JNf:not(.NKrsie) {
+      background: @base !important;
+    }
+
+
+
 
     /* safe search toggle dropdown */
     .z4R3Z.yb2zA {
