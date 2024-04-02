@@ -80,19 +80,21 @@
     --uv-styles-color-text-default: @subtext0 !important;
     --uv-styles-color-review-stars: @yellow !important;
 
+
     /*   convertion   */
     .rYVYn {
       color: @text !important;
-      background-color: @base !important;
+      background-color: lighten(@surface0, 7.5) !important;
     }
     .LNn04b {
       color: @text !important;
-      background-color: @base !important;
-      border: 1px solid  @surface0 !important;
+      background-color:  lighten(@surface0, 7.5) !important;
+      border: 1px solid  lighten(@surface0, 7.5) !important;
     }
 
     .vXQmIe {
       color: @text !important;
+      background-color: @surface0 !important;
       border: 1px solid  @surface0 !important;
     }
     .jCkZnd {
@@ -105,8 +107,17 @@
     }
 
     .vk_c {
-      border: 1px solid  @surface0 !important;
+      background-color: color-mix(in srgb, @base 35%, @surface0) !important;
+      border: 1px solid color-mix(in srgb, @base 35%, @surface0) !important;
     }
+
+      /*   feedback   */
+    .nKHyTc {
+      color: @subtext0 !important;
+    }
+
+
+
     /*   infobox separator   */
     .HsZQAe {
       border-bottom: 1px solid  @surface0 !important;
@@ -171,7 +182,19 @@
       color: @text !important;
     }
 
+    /*   ask a follow up color  */
+    .YzCcne {
+      --mc2t: @surface0 !important;
 
+      --mc29: @surface0 !important;
+
+      --m3c15: @accent-color !important;
+      --m3c9: @accent-color !important;
+    }
+
+    .bDo4af {
+      background: @surface0 !important;
+    }
 
 
 
