@@ -148,6 +148,15 @@
       // --m3c19: @surface0 !important;
       // --m3c20: @accent-color !important;
     }
+    /*   AI overview text  */
+    .QVRyCf {
+      color: @base !important;
+    }
+    /*   AI overview text highligh  */
+    .sxWgqf {
+      --m3c7: @accent-color !important;
+    }
+
 
     /*  AI overview background  */
     .X6JNf:not(.NKrsie) {
