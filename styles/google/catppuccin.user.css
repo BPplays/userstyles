@@ -163,6 +163,11 @@
       --m3c15: @text !important;
     }
 
+    /*   AI overview text highligh  */
+    .RDmXvc {
+      background-image: linear-gradient(transparent 0px,rgba(@accent-color,0.0) 52px)
+    }
+
 
     /*  AI overview background  */
     .X6JNf:not(.NKrsie) {
