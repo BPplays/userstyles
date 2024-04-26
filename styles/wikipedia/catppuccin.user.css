@@ -410,6 +410,7 @@
     .cdx-text-input__input {
       background: @surface0 !important;
       border-color: @surface0 !important;
+      border: 0px solid !important;
     }
 
     .cdx-search-input__end-button:enabled:focus {
@@ -418,6 +419,9 @@
     .cdx-search-input__end-button {
       background: @surface1 !important;
       border-color: @surface1 !important;
+      &:hover {
+        background-color: @surface2 !important;
+      }
     }
 
     .hidden-title {
