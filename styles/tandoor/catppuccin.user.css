@@ -131,13 +131,33 @@
       border-color: @surface0 !important;
     }
 
-    .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link{
-      color: @text;
+    .navbar-light .navbar-nav .nav-link:not(:hover):not(.navbar-light .navbar-nav .active > .nav-link):not(.navbar-light .navbar-nav .nav-link.active):not(.navbar-light .navbar-nav .nav-link.show):not(.navbar-light .navbar-nav .show > .nav-link) {
+      color: @subtext0 !important;
     }
 
-    .navbar-light .navbar-nav .nav-link{
-      color: @subtext0;
+    .navbar-light .navbar-nav .nav-link:not(:hover):not(.navbar-light .navbar-nav .active > .nav-link):not(.navbar-light .navbar-nav .nav-link.active):not(.navbar-light .navbar-nav .nav-link.show):not(.navbar-light .navbar-nav .show > .nav-link) > .fa,
+    .navbar-light .navbar-nav .nav-link:not(:hover):not(.navbar-light .navbar-nav .active > .nav-link):not(.navbar-light .navbar-nav .nav-link.active):not(.navbar-light .navbar-nav .nav-link.show):not(.navbar-light .navbar-nav .show > .nav-link) > .fas {
+      color: @subtext0 !important;
     }
+
+    .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link{
+      color: @text !important;
+    }
+
+    .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link > .fa,
+    .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link > .fas {
+      color: @text !important;
+    }
+
+    .nav-link:hover{
+      color: @subtext1 !important;
+    }
+
+    .nav-link:hover >  .fa, .nav-link:hover > .fas{
+      color: @subtext1 !important;
+    }
+
+
 
     .badge-light{
       background-color: @accent-color;
@@ -183,6 +203,66 @@
       color: @surface0 !important;
       background-color: @green !important;
     }
+
+    .navbar-expand-lg .navbar-nav .dropdown-menu {
+      background-color: @surface0 !important;
+      border-color: @surface0 !important;
+    }
+
+    .text-muted {
+      color: @subtext0 !important;
+    }
+
+    .dropdown-item {
+      color: @text !important;
+    }
+
+    .dropdown-item:hover {
+      color: @surface0 !important;
+      background-color: @text !important;
+    }
+
+    .dropdown-item:hover >  .fa, .dropdown-item:hover > .fas{
+      color: @surface0 !important;
+    }
+
+    .card .card-body:hover >  .fa, .card .card-body:hover > .fas{
+      color: @accent-color !important;
+    }
+
+    .breadcrumb {
+      background-color: @surface0 !important;
+    }
+
+    .breadcrumb-item > a {
+      color: @accent-color !important;
+    }
+    .breadcrumb-item > a:hover {
+      color: @text !important;
+    }
+
+    .modal-content {
+      color: @text !important;
+      background-color: @surface0 !important;
+    }
+    .close {
+      color: @text !important;
+      text-shadow: 0 0 0 transparent !important;
+    }
+
+    .table.table-bordered > tr > td > a:not(hover) {
+      color: @accent-color !important;
+    }
+
+    .table.table-bordered > tr > td > a:hover {
+      color: @text !important;
+    }
+
+    .table td, .table th {
+      border-top-color: @surface2 !important;
+    }
+
+
 
   }
 }
