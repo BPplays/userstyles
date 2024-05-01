@@ -187,16 +187,32 @@
       color: @subtext0 !important;
     }
 
-    .btn-outline-primary{
+    .btn-outline-primary:not(.row.mt-2 > div > div > .btn-outline-primary):not(.row.mt-2 > div > div > #sortby > .btn-outline-primary){
       background-color: @surface1 !important;
       border-color: @surface1 !important;
       color: @accent-color !important;
-      transition: all .5s ease-in-out !important;
     }
+
+    .row.mt-2 > div > div > .btn-outline-primary,
+    .row.mt-2 > div > div > #sortby > .btn-outline-primary {
+      background-color: @surface0 !important;
+      border-color: @surface0 !important;
+      color: @accent-color !important;
+    }
+
 
     .text-primary,
     .card-title > a {
       color: @accent-color !important;
+    }
+
+    .navbar-light .navbar-toggler-icon {
+      @escapedtext: replace(@text, "#", "%23");
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='@{escapedtext}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+    }
+
+    .navbar-light .navbar-toggler {
+      border-color: @surface0 !important;
     }
 
     .btn-success {
@@ -282,6 +298,42 @@
     .input-group-append > .btn.btn-primary.collapsed:hover {
       background-color: @subtext0 !important;
       border-color: @subtext0 !important;
+    }
+
+    .modal-content > .modal-footer > .btn.btn-primary:not(:hover) {
+      background-color: @accent-color !important;
+      border-color: @accent-color !important;
+      color: @surface0 !important;
+    }
+
+    .modal-content > .modal-footer > .btn.btn-primary:hover {
+      background-color: @surface1 !important;
+      border-color: @surface1 !important;
+      color: @accent-color !important;
+    }
+
+    .modal-content > .modal-footer > .btn.btn-secondary:not(:hover) {
+      background-color: @red !important;
+      border-color: @red !important;
+      color: @surface0 !important;
+    }
+
+    .modal-content > .modal-footer > .btn.btn-secondary:hover {
+      background-color: @surface1 !important;
+      border-color: @surface1 !important;
+      color: @red !important;
+    }
+
+    .nav.flex-column > .nav-item > .nav-link:not(:hover):not(.nav.flex-column > .nav-item > .nav-link.active) {
+      color: @subtext0 !important;
+    }
+
+    .nav.flex-column > .nav-item > .nav-link:hover:not(.nav.flex-column > .nav-item > .nav-link.active) {
+      color: @subtext1 !important;
+    }
+
+    .nav.flex-column > .nav-item > .nav-link.active {
+      color: @text !important;
     }
 
 
