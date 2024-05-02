@@ -335,6 +335,17 @@
     .nav.flex-column > .nav-item > .nav-link.active {
       color: @text !important;
     }
+
+
+    .card-img-top {
+      background-color: @surface1 !important;
+    }
+
+
+
+
+
+
     & when (@lookup = latte) {
       @logo-image: @logo-image-latte;
       .brand-icon {
