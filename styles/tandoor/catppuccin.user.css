@@ -106,7 +106,7 @@
 
 
     .form-control,
-    .fa, .fas,
+    // .fa, .fas,
     .two-row-text[data-v-8dba8f0c] {
       color: @text !important;
     }
@@ -115,10 +115,12 @@
       border-top-color: @surface0 !important;
     }
 
-    textarea, input:not([type="submit"]):not([class="multiselect__input"]):not([class="select2-search__field"]):not([class="vue-treeselect__input"]), select {
-      background-color: @surface0 !important;
-      border-color: @surface0 !important;
-    }
+    // textarea, input:not([type="submit"]):not([class="multiselect__input"]):not([class="select2-search__field"]):not([class="vue-treeselect__input"]), select {
+    //   // background-color: @surface0 !important;
+    //   // border-color: @surface0 !important;
+    //   background-color: none !important;
+    //   border-color: none !important;
+    // }
 
     & {
       --dark: @text !important;
@@ -229,8 +231,41 @@
       color: @subtext0 !important;
     }
 
-    .dropdown-item {
+    .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
       color: @text !important;
+      background-color: @surface1 !important;
+      border-color: @surface1 !important;
+    }
+
+    div[role="tabpanel"] > form > fieldset > div > .form-control,
+    div[role="tabpanel"] > form > fieldset > div > .form-control > textarea, input:not([type="submit"]):not([class="multiselect__input"]):not([class="select2-search__field"]):not([class="vue-treeselect__input"]), select {
+      color: @text !important;
+      background-color: @surface1 !important;
+      border-color: @surface1 !important;
+    }
+
+    .dropdown-item,
+    .dropdown-menu[x-placement^=bottom], .dropdown-menu[x-placement^=left], .dropdown-menu[x-placement^=right], .dropdown-menu[x-placement^=top] {
+      color: @text !important;
+      background-color: @surface1 !important;
+      border-color: @surface1 !important;
+    }
+
+    div[role="tabpanel"] .multiselect__tags,
+    div[role="tabpanel"] .multiselect--above, div[role="tabpanel"] .multiselect__content-wrapper,
+    div[role="tabpanel"] .multiselect__input:focus {
+      color: @text !important;
+      background-color: @surface1 !important;
+      border-color: @surface1 !important;
+    }
+
+    div[role="tabpanel"] .multiselect__placeholder {
+      color: @subtext0 !important;
+    }
+
+    div[role="tabpanel"] .multiselect__single, div[role="tabpanel"] .multiselect {
+      background-color: transparent !important;
+      border-color: transparent !important;
     }
 
     .dropdown-item:hover {
@@ -250,7 +285,8 @@
       background-color: @surface0 !important;
     }
 
-    .breadcrumb-item > a {
+    .breadcrumb-item > a,
+    .btn-link {
       color: @accent-color !important;
     }
     .breadcrumb-item > a:hover {
@@ -339,6 +375,12 @@
 
     .card-img-top {
       background-color: @surface1 !important;
+    }
+
+    .popover-header,
+    .popover.b-popover.bs-popover-right {
+      background-color: @surface1 !important;
+      border-color: @surface1 !important;
     }
 
 
