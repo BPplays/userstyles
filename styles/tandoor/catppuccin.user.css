@@ -277,6 +277,12 @@
       color: @accent-color !important;
     }
 
+
+    div[class="modal-body pr-3 pl-3"] div[class="tabs"] .nav-tabs {
+      border-bottom-color: @surface1 !important;
+    }
+
+
     .dropdown-item:hover {
       color: @surface0 !important;
       background-color: @text !important;
