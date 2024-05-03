@@ -329,6 +329,21 @@
       }
     }
 
+    div[class="card-body pr-2 pl-2 pr-md-5 pl-md-5"] input:not([type="submit"]):not([class="multiselect__input"]):not([class="select2-search__field"]):not([class="vue-treeselect__input"]) {
+      color: @text !important;
+      background-color: @surface1 !important;
+      border-color: @surface1 !important;
+    }
+
+    div[class="jumbotron"] {
+      background-color: @surface1 !important;
+      border-color: @surface1 !important;
+    }
+
+    div[class="jumbotron"] input:not([type="submit"]):not([class="multiselect__input"]):not([class="select2-search__field"]):not([class="vue-treeselect__input"]) {
+      background-color: @surface2 !important;
+      border-color: @surface2 !important;
+    }
 
 
 
