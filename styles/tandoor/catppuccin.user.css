@@ -315,10 +315,20 @@
       border-color: @surface0 !important;
     }
 
-    .btn-circle[aria-controls="related-recipes"] {
-      color: @surface0 !important;
-      background-color: @accent-color !important;
+    @media (min-width: 992px) {
+      .btn-circle[aria-controls="related-recipes"] {
+        color: @surface0 !important;
+        background-color: @accent-color !important;
+      }
     }
+
+    @media (max-width: 991.98px) {
+      .btn-circle[aria-controls="related-recipes"] {
+        color: @text !important;
+        background-color: transparent !important;
+      }
+    }
+
 
 
 
