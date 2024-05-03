@@ -267,6 +267,13 @@
       border-color: @surface1 !important;
     }
 
+
+    div[class="col-12 col-lg-10 col-xl-10 mt-2"] input:not([type="submit"]):not([class="multiselect__input"]):not([class="select2-search__field"]):not([class="vue-treeselect__input"]) {
+      color: @text !important;
+      background-color: @surface1 !important;
+      border-color: @surface1 !important;
+    }
+
     div[role="tabpanel"] .multiselect__placeholder {
       color: @subtext0 !important;
     }
