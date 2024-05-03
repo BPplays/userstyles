@@ -268,6 +268,15 @@
       border-color: transparent !important;
     }
 
+    ul[role="tablist"] a[role="tab"] {
+      background-color: transparent !important;
+      border-color: transparent !important;
+      color: @subtext0 !important;
+    }
+    ul[role="tablist"] a[role="tab"]:hover {
+      color: @accent-color !important;
+    }
+
     .dropdown-item:hover {
       color: @surface0 !important;
       background-color: @text !important;
