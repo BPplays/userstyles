@@ -238,10 +238,18 @@
     }
 
     div[role="tabpanel"] > form > fieldset > div > .form-control,
-    div[role="tabpanel"] > form > fieldset > div > .form-control > textarea, input:not([type="submit"]):not([class="multiselect__input"]):not([class="select2-search__field"]):not([class="vue-treeselect__input"]), select {
+    div[role="tabpanel"] > form > fieldset > div > .form-control > textarea,
+    div[role="tabpanel"] > form > fieldset > div > .form-control > input:not([type="submit"]):not([class="multiselect__input"]):not([class="select2-search__field"]):not([class="vue-treeselect__input"]),
+    div[role="tabpanel"] > form > fieldset > div > .form-control > select {
       color: @text !important;
       background-color: @surface1 !important;
       border-color: @surface1 !important;
+    }
+
+    div[class="my-auto mr-1"] input:not([type="submit"]):not([class="multiselect__input"]):not([class="select2-search__field"]):not([class="vue-treeselect__input"]) {
+      color: @text !important;
+      background-color: @surface0 !important;
+      border-color: @surface0 !important;
     }
 
     .dropdown-item,
@@ -281,6 +289,26 @@
     div[class="modal-body pr-3 pl-3"] div[class="tabs"] .nav-tabs {
       border-bottom-color: @surface1 !important;
     }
+
+    div[class="input-group mb-3"] div[class="tabs"] .nav-tabs {
+      border-bottom-color: @surface1 !important;
+    }
+
+    div[class="ingredients card border-primary no-border"] div[class="card-header"] {
+      border-bottom-color: @surface2 !important;
+    }
+
+    textarea[name="comment-text"] {
+      color: @text !important;
+      background-color: @surface0 !important;
+      border-color: @surface0 !important;
+    }
+
+    .btn-circle[aria-controls="related-recipes"] {
+      color: @surface0 !important;
+      background-color: @accent-color !important;
+    }
+
 
 
     .dropdown-item:hover {
@@ -345,10 +373,12 @@
     .input-group-append > .btn.btn-primary.collapsed:not(:hover) {
       background-color: @accent-color !important;
       border-color: @accent-color !important;
+      color: @surface0 !important;
     }
     .input-group-append > .btn.btn-primary.collapsed:hover {
       background-color: @subtext0 !important;
       border-color: @subtext0 !important;
+      color: @text !important;
     }
 
     .modal-content > .modal-footer > .btn.btn-primary:not(:hover) {
