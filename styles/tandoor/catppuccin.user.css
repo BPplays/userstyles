@@ -78,6 +78,9 @@
     @accent-color2: @catppuccin[@@lookup][@@accent2];
 
 
+
+    @textdark: @surface0;
+
     .set-warn-colors() when not (@accent-color = @yellow) and not (@accent-color2 = @yellow) {
       @warn-color: @yellow;
     }
@@ -98,10 +101,10 @@
       @danger-color: @peach;
     }
     .set-danger-colors() when (@accent-color = @red) and (@accent-color2 = @peach) {
-      @danger-color: @flamingo;
+      @danger-color: @pink;
     }
     .set-danger-colors() when (@accent-color = @peach) and (@accent-color2 = @red) {
-      @danger-color: @flamingo;
+      @danger-color: @pink;
     }
 
     .set-warn-colors();
@@ -202,25 +205,25 @@
 
     .badge-light{
       background-color: @accent-color;
-      color: @surface0;
+      color: @textdark;
     }
     .badge-light >  .fa, .badge-light > .fas{
-      color: @surface0 !important;
+      color: @textdark !important;
     }
 
     .badge-secondary{
       background-color: @accent-color2;
-      color: @surface0;
+      color: @textdark;
     }
     .badge-secondary >  .fa, .badge-secondary > .fas,
     .btn-success >  .fa, .btn-success > .fas{
-      color: @surface0 !important;
+      color: @textdark !important;
     }
 
     .page-item.active .page-link{
       background-color: @accent-color !important;
       border-color: @accent-color !important;
-      color: @surface0 !important;
+      color: @textdark !important;
     }
     .page-link{
       background-color: @surface0 !important;
@@ -257,7 +260,7 @@
     }
 
     .btn-success {
-      color: @surface0 !important;
+      color: @textdark !important;
       background-color: @green !important;
     }
 
@@ -356,7 +359,7 @@
 
     @media (min-width: 992px) {
       .btn-circle[aria-controls="related-recipes"] {
-        color: @surface0 !important;
+        color: @textdark !important;
         background-color: @accent-color !important;
       }
     }
@@ -387,12 +390,12 @@
 
 
     .dropdown-item:hover {
-      color: @surface0 !important;
+      color: @textdark !important;
       background-color: @text !important;
     }
 
     .dropdown-item:hover >  .fa, .dropdown-item:hover > .fas{
-      color: @surface0 !important;
+      color: @textdark !important;
     }
 
     .card .card-body:hover >  .fa, .card .card-body:hover > .fas{
@@ -400,7 +403,7 @@
     }
 
     .breadcrumb {
-      background-color: @surface0 !important;
+      background-color: @textdark !important;
     }
 
     .breadcrumb-item > a,
@@ -448,7 +451,7 @@
     .input-group-append > .btn.btn-primary.collapsed:not(:hover) {
       background-color: @accent-color !important;
       border-color: @accent-color !important;
-      color: @surface0 !important;
+      color: @textdark !important;
     }
     .input-group-append > .btn.btn-primary.collapsed:hover {
       background-color: @subtext0 !important;
@@ -459,7 +462,7 @@
     .modal-content > .modal-footer > .btn.btn-primary:not(:hover) {
       background-color: @accent-color !important;
       border-color: @accent-color !important;
-      color: @surface0 !important;
+      color: @textdark !important;
     }
 
     .modal-content > .modal-footer > .btn.btn-primary:hover {
@@ -472,7 +475,7 @@
     .btn-danger:not(:hover) {
       background-color: @danger-color !important;
       border-color: @danger-color !important;
-      color: @surface0 !important;
+      color: @textdark !important;
     }
 
     .modal-content > .modal-footer > .btn.btn-secondary:hover,
@@ -502,6 +505,28 @@
       background-color: @danger-color !important;
       border-color: @danger-color !important;
     }
+
+    button[title="Ctrl + S"] {
+      background-color: @blue !important;
+      border-color: @blue !important;
+      color: @textdark !important;
+    }
+
+
+
+    .col.col-md-12 > .btn.ml-1.mb-1.mb-md-0.btn-primary.btn-sm.rounded-pill:not(:hover), a[href="/view/recipe/3"]:not(:hover) {
+      background-color: @accent-color2 !important;
+      border-color: @accent-color2 !important;
+      color: @textdark !important;
+    }
+    .col.col-md-12 > .btn.ml-1.mb-1.mb-md-0.btn-primary.btn-sm.rounded-pill:hover,
+    a[href="/view/recipe/3"]:hover {
+      background-color: @surface1 !important;
+      border-color: @accent-color2 !important;
+      color: @accent-color2 !important;
+    }
+
+
 
 
 
