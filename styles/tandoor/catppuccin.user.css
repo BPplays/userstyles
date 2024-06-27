@@ -13,6 +13,7 @@
 @var select lightFlavor "Light Flavor" ["latte:Latte*", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha"]
 @var select darkFlavor "Dark Flavor" ["latte:Latte", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha*"]
 @var select accentColor "Accent" ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve*", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
+@var select accentColor2 "Accent 2" ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve", "red:Red", "maroon:Maroon", "peach:Peach*", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
 ==/UserStyle== */
 
 @-moz-document regexp('https?:\\/\\/tandoor.*.')  {
@@ -22,12 +23,12 @@
   */
   @media (prefers-color-scheme: light) {
     :root {
-      #catppuccin(@lightFlavor, @accentColor);
+      #catppuccin(@lightFlavor, @accentColor, @accentColor2);
     }
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      #catppuccin(@darkFlavor, @accentColor);
+      #catppuccin(@darkFlavor, @accentColor, @accentColor2);
     }
   }
 
@@ -40,13 +41,13 @@
      For an actual example of this, see https://github.com/catppuccin/userstyles/blob/39288b593278e5efa48007d5fc001292cf910672/styles/youtube/catppuccin.user.css#L21-L30.
   */
   :root[data-theme="dark"] {
-    #catppuccin(@darkFlavor, @accentColor);
+    #catppuccin(@darkFlavor, @accentColor, @accentColor2);
   }
   :root[data-theme="light"] {
-    #catppuccin(@lightFlavor, @accentColor);
+    #catppuccin(@lightFlavor, @accentColor, @accentColor2);
   }
 
-  #catppuccin(@lookup, @accent) {
+  #catppuccin(@lookup, @accent, @accent2) {
     @rosewater: @catppuccin[@@lookup][@rosewater];
     @flamingo: @catppuccin[@@lookup][@flamingo];
     @pink: @catppuccin[@@lookup][@pink];
@@ -74,6 +75,37 @@
     @mantle: @catppuccin[@@lookup][@mantle];
     @crust: @catppuccin[@@lookup][@crust];
     @accent-color: @catppuccin[@@lookup][@@accent];
+    @accent-color2: @catppuccin[@@lookup][@@accent2];
+
+
+    .set-warn-colors() when not (@accent-color = @yellow) and not (@accent-color2 = @yellow) {
+      @warn-color: @yellow;
+    }
+    .set-warn-colors() when (@accent-color = @yellow) or (@accent-color2 = @yellow) {
+      @warn-color: @peach;
+    }
+    .set-warn-colors() when (@accent-color = @peach) and (@accent-color2 = @yellow) {
+      @warn-color: @maroon;
+    }
+    .set-warn-colors() when (@accent-color = @yellow) and (@accent-color2 = @peach) {
+      @warn-color: @maroon;
+    }
+
+    .set-danger-colors() when not (@accent-color = @red) and not (@accent-color2 = @red) {
+      @danger-color: @red;
+    }
+    .set-danger-colors() when (@accent-color = @red) or (@accent-color2 = @red) {
+      @danger-color: @peach;
+    }
+    .set-danger-colors() when (@accent-color = @red) and (@accent-color2 = @peach) {
+      @danger-color: @flamingo;
+    }
+    .set-danger-colors() when (@accent-color = @peach) and (@accent-color2 = @red) {
+      @danger-color: @flamingo;
+    }
+
+    .set-warn-colors();
+    .set-danger-colors();
 
     color-scheme: if(@lookup = latte, light, dark);
 
@@ -102,6 +134,13 @@
 
     .table {
       color: @text;
+    }
+
+
+    textarea, input:not([type="submit"]):not([class="multiselect__input"]):not([class="select2-search__field"]):not([class="vue-treeselect__input"]), select {
+      background-color: @surface0 !important;
+      color: @text !important;
+      border-color: @surface0 !important;
     }
 
 
@@ -170,7 +209,7 @@
     }
 
     .badge-secondary{
-      background-color: @peach;
+      background-color: @accent-color2;
       color: @surface0;
     }
     .badge-secondary >  .fa, .badge-secondary > .fas,
@@ -429,17 +468,42 @@
       color: @accent-color !important;
     }
 
-    .modal-content > .modal-footer > .btn.btn-secondary:not(:hover) {
-      background-color: @red !important;
-      border-color: @red !important;
+    .modal-content > .modal-footer > .btn.btn-secondary:not(:hover),
+    .btn-danger:not(:hover) {
+      background-color: @danger-color !important;
+      border-color: @danger-color !important;
       color: @surface0 !important;
     }
 
-    .modal-content > .modal-footer > .btn.btn-secondary:hover {
+    .modal-content > .modal-footer > .btn.btn-secondary:hover,
+    .btn-danger:hover {
       background-color: @surface1 !important;
       border-color: @surface1 !important;
-      color: @red !important;
+      color: @danger-color !important;
     }
+
+    div[aria-owns="listbox-id_keywords"] > .multiselect__tags {
+      background-color: @surface0 !important;
+      border-color: @surface0 !important;
+      color: @text !important;
+    }
+
+    div[aria-owns="listbox-id_keywords"] > .multiselect__tags > .multiselect__tags-wrap > .multiselect__tag {
+      background-color: @surface1 !important;
+      border-color: @surface1 !important;
+      color: @text !important;
+    }
+
+    div[aria-owns="listbox-id_keywords"] > .multiselect__tags > .multiselect__tags-wrap > .multiselect__tag > .multiselect__tag-icon:not(:hover) {
+      background-color: @surface1 !important;
+      border-color: @surface1 !important;
+    }
+    div[aria-owns="listbox-id_keywords"] > .multiselect__tags > .multiselect__tags-wrap > .multiselect__tag > .multiselect__tag-icon:hover {
+      background-color: @danger-color !important;
+      border-color: @danger-color !important;
+    }
+
+
 
     .nav.flex-column > .nav-item > .nav-link:not(:hover):not(.nav.flex-column > .nav-item > .nav-link.active) {
       color: @subtext0 !important;
