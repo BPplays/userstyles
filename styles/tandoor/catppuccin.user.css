@@ -514,14 +514,13 @@
 
 
 
-    .col.col-md-12 > .btn.ml-1.mb-1.mb-md-0.btn-primary.btn-sm.rounded-pill:not(:hover), a[href="/view/recipe/3"]:not(:hover),
+    .col.col-md-12 > .btn.ml-1.mb-1.mb-md-0.btn-primary.btn-sm.rounded-pill:not
     .input-group-append > .btn.btn-primary:not(:hover) {
       background-color: @accent-color2 !important;
       border-color: @accent-color2 !important;
       color: @textdark !important;
     }
     .col.col-md-12 > .btn.ml-1.mb-1.mb-md-0.btn-primary.btn-sm.rounded-pill:hover,
-    a[href="/view/recipe/3"]:hover,
     .input-group-append > .btn.btn-primary:hover {
       background-color: @surface1 !important;
       border-color: @accent-color2 !important;
